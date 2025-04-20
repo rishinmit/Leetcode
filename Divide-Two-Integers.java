@@ -22,8 +22,8 @@ class Solution {
             while (num >= (div << (c + 1))) {
                 c++;
             }
-            ans += (1 << c);
-            num -= (div << c);
+            ans = ans + (1 << c);
+            num = num - (div << c);
         }
 
         return sign ? ans : -ans;
